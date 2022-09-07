@@ -1,2 +1,2 @@
-# CSL-LR-NCL
+# CSL-NCL
 Scripts for NCL Cyber Skyline games
