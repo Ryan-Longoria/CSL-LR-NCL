@@ -1,6 +1,7 @@
 $filepath = Read-Host -Prompt "Input your log's filepath"
 Write-Output "You entered: $filepath`n"
 
+Write-Output "---------------------------------------------------------------------------------------"
 Write-Output "Log-Analysis options: "
 Write-Output "1. Output the first line               2. Output the last line"
 Write-Output "3. Find a specific line                4. Find lines containing specific word(s)"
