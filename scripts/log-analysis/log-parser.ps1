@@ -17,6 +17,11 @@ while(1){
 		Write-Output "$first"
 	}
 
+	if($option -eq 2) {
+		$last = $filedata[-1]
+		Write-Output "$last"
+	}
+
 	if ($option -eq 8) {
 		$length = $filedata.length
 		Write-Output "$length"
