@@ -1,5 +1,5 @@
 $filepath = Read-Host -Prompt "Input your log's filepath"
-Write-Output "You entered: $filepath`n"
+Write-Output "You entered filepath: $filepath`n"
 
 Write-Output "---------------------------------------------------------------------------------------"
 Write-Output "Log-Analysis options: "
