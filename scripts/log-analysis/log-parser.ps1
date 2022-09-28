@@ -1,9 +1,10 @@
+Write-Ascii -InputObject 'CSL Log-Analysis'
 $filepath = Read-Host -Prompt "Input your log's filepath"
-Write-Output "You entered filepath: $filepath`n"
+Write-Output "You entered filepath: $filepath"
 $filedata = Get-Content $filepath
 
 while(1){
-	Write-Output "---------------------------------------------------------------------------------------"
+	Write-Output "`n---------------------------------------------------------------------------------------"
 	Write-Output "Log-Analysis options: "
 	Write-Output "1. Output the first line               2. Output the last line"
 	Write-Output "3. Find a specific line number         4. Find lines containing specific string"
@@ -29,10 +30,21 @@ while(1){
 		Write-Output "$linedata"
 	}
 
-	if ($option -eq 8) {
+	if($option -eq 4) {
+		$string = Read-Host -Prompt "Enter a string to search"
+		Write-Output "Searching for lines with $string..."
+		Select-String -Path $filepath -Pattern "$string"
+	}
+
+	if($option -eq 5) {
+		
+	}
+
+	if($option -eq 8) {
 		$length = $filedata.length
 		Write-Output "$length"
 	}
+	
 	if($option -eq 9) {
 		Exit
 	}
