@@ -10,10 +10,11 @@ while(1){
 	Write-Output "5. Find most occurred words            6. Find the occurrences of a specific word/line"
 	Write-Output "7. Find line(s) with Regex pattern     8. Count number of lines"
 	Write-Output "9. Quit`n"
-	$option = Read-Host -Prompt "Enter option: "
+	$option = Read-Host -Prompt "Enter option"
 
 	if($option -eq 1) {
-		Write-Output "$filedata[1]"
+		$first = $filedata[0]
+		Write-Output "$first"
 	}
 
 	if ($option -eq 8) {
