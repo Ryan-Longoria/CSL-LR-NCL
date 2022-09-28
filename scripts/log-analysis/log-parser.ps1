@@ -9,8 +9,7 @@ while(1){
 	Write-Output "1. Output the first line               2. Output the last line"
 	Write-Output "3. Find a specific line number         4. Find lines containing specific string"
 	Write-Output "5. Find most occurred words            6. Find the occurrences of a specific string"
-	Write-Output "7. Find line(s) with Regex pattern     8. Count number of lines"
-	Write-Output "9. Quit`n"
+	Write-Output "7. Count number of lines               8. Quit`n"
 	$option = Read-Host -Prompt "Enter option"
 
 	if($option -eq 1) {
@@ -37,7 +36,18 @@ while(1){
 	}
 
 	if($option -eq 5) {
-		
+		Write-Output "five"
+	}
+
+	if($option -eq 6) {
+		$string = Read-Host -Prompt "Enter a string to find occurrences"
+		$occur = (Select-String -Path $filepath -Pattern $string).length
+		Write-Output "Number of Occurrences: $occur"
+	}
+
+	if($option -eq 7) {
+		$pattern = Read-Host -Prompt "Enter a regex pattern to find"
+		Select-String -Path $filepath -Pattern $pattern
 	}
 
 	if($option -eq 8) {
